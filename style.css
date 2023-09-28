@@ -14,12 +14,17 @@ body{
 h1{
     text-align: center;
     font-size: 2.5rem;
-    color: #0f0f0f;
     padding-bottom: 1rem;
-}
+    background: linear-gradient(300deg, white 0, #919191 50%, black 100%);
+    background-size: 400% 100%;
+    animation: efeito 5s ease-in infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}   
 .lista{
-    background-color: rgba(153, 153, 153, 0.637);
-    backdrop-filter: blur( 13.5px );
+    background-color: rgba(153, 153, 153, 0);
+    backdrop-filter: blur( 135px );
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.548);
     width: 800px;
     border-radius: 5px;
     margin-left: auto;
@@ -86,14 +91,24 @@ padding-right: 15px;
     cursor: pointer;
     background-color: rgb(91, 212, 101);
     color: #0f0f0f;
+    transition: 0.7s;
    
 }
 .buttonAdd:hover{
     background-color: rgb(5, 66, 10);
-    transition: 0.5s;
+    
 }
 
 .done{
     background-color: rgb(117, 252, 123);
     color: rgba(128, 128, 128, 0.822);
+}
+
+@keyframes efeito {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
 }
